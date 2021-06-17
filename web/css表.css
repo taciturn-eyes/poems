@@ -1,0 +1,239 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0;
+	padding:0;}
+
+.poem{
+	font-family:"华文行楷";
+	font-size:36px;
+	color:#666;
+	}
+a:link{color:#999;
+		font-size:16px;
+	    text-decoration:none;}
+a:visited{color:#666;
+		text-decoration:none;}
+a:hover{color:#F00;
+		text-decoration:underline;}
+.topic{ width:520px;
+		margin-top:24px;}
+a{
+	margin:15px;
+	text-decoration:none;
+	color:#000;
+	text-decoration:none;
+	text-transform:uppercase;}
+span{ font-size:larger;
+		color:#999;}
+li{font-size:large;}		
+.learn h1::selection,
+.learn p::selection{
+	background-color:none;}
+.learn{
+	margin:0;
+	padding:0;
+	background-image:url(image/%E8%83%8C%E6%99%AF.jpg);
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+	flex-direction:column;
+	position:relative;
+	width:100%;}
+.learn::before{
+	content:"";
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-image:linear-gradient(90deg,#666,#990,#930,#CF3,#639,#9FF,#93C,#CCC,#666);
+	opacity:0.35;
+	background-size:600%;
+	animation:a 40s linear infinite;}
+@keyframes a{
+	0%{background-position:0%;
+	}
+	100%{
+		background-position:600%;}
+}
+.header{
+	height:70px;
+	width:100%;
+	z-index:1;
+	align-items:right;
+	position:fixed;
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	text-align:right;
+	margin-top:10px;
+	}
+.nav{display:flex;
+	 position:fixed;
+	  float:right;
+	  text-decoration:none;
+	  text-align:right;
+	  list-style:none;
+	  margin-right:10%;
+	  justify-content:right;
+	  }
+.nav li{
+	list-style:none;}
+.nav li a{
+	text-decoration:none;
+	position:relative;
+	font-size:30px;
+	font-weight:700;
+	font-family:"华文楷体";
+	display:block;
+	overflow:hidden;
+	transition:0.7s all;
+	padding:14px 20px;
+	margin-top:30px;}
+.logo{fles: 1 1 auto;
+	  margin-left:4%;
+	  text-transform:uppercase;
+	  letter-spacing:1px;
+	  font-weight:bold;
+	  font-size:40px;	  }
+.banner-area{
+	position:relative;
+	background-image:url(image/%E8%AF%97%E6%AD%8C%E4%B9%8B%E5%A4%9C.jpg);
+	width:100%;
+	height:100vh;
+	background-repeat:no-repeat;
+	background-size:cover;}
+.dingyi-area,.yishu-area,.poems-area{
+	position:relative;
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	flex-direction:row;
+	width:100%;
+	height:700px;}
+.text-part{
+	width:65%;
+	height:80%;}
+h1{font-size:50px;
+	font-family:"华文行楷", "华文琥珀", "华文彩云", "华文仿宋", "黑体", "华文楷体", "华文隶书", "华文宋体", "华文细黑", "华文新魏", "华文中宋", "新宋体", "微软雅黑";}
+p{
+	font-size:24px;
+	line-height:50px;}
+.dingyi-area,.poems-area{
+	background:#fefefe;}
+.yishu-area{
+	background:#262626;
+	color:#fff;}
+html{
+	scroll-behavior:smooth;}
+.beidao{
+	background-image:url(image/%E5%8C%97%E5%B2%9B4.jpg);
+	position:relative;
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	flex-direction:row;
+	height:400px;
+	width:60%;
+	background-repeat:no-repeat;
+	margin-left:15%;
+	z-index:1;
+	text-align:left;}
+.container{
+	width:80%;
+	padding:20px;
+	}
+.container h1{
+	width:100%;
+	color:#45f3ff;
+	font-size:36px;
+	margin-bottom:10px;}
+.container .row100{
+	position:relative;
+	width:100%;
+	display:grid;
+	grid-template-columns:repeat(autofit,minmax(300px;1fr));}
+.container .row100 .col{
+	position:relative;
+	width:100%;
+	padding:0 10px;
+	margin:30px 0 10px;
+	transition:0.5s;}
+.container .row100 .inputBox{
+	position:relative;
+	width:100%;
+	height:40px;
+	color:#45f3ff;}
+.container .row100 .inputBox input,
+.container .row100 .inputBox .textarea textarea{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:transparent;
+	box-shadow:none;
+	border:none;
+	font-size:18px;
+	padding:0 10px;
+	z-index:1;
+	color:#000;}
+.container .row100 .inputBox .text{
+	position:absolute;
+	top:0;
+	left:0;
+	line-height:40px;
+	font-size:18px;
+	padding:0 10px;
+	display:block;
+	transition:0.5s}
+.container .row100 .inputBox input:focus+.text,
+.container .row100 .inputBox input:valid+.text{
+	top:-35px;
+	left:-10px;}
+.container .row100 .inputBox .line{
+	position:absolute;
+	bottom:0;
+	display:block;
+	width:100%;
+	height:2px;
+	background:#45f3ff;
+	transition:0.5s;
+	border-radius:2px;}
+.container .row100 .inputBox input:focus~.line,
+.container .row100 .inputBox input:valid~.line{
+	height:100%;}
+.container .row100 .inputBox .textarea{
+	position:relative;
+	width:100%;
+	height:100px;
+	padding:10px 0;}
+.container .row100 .inputBox .textarea textarea{
+	height:100%;
+	resize:none;}
+.container .row100 .inputBox textarea:focus+.text,
+.container .row100 .inputBox textarea:valid+.text{
+	top:-35px;
+	left:-10px;}
+.container .row100 .inputBox  textarea:focus~.line,
+.container .row100 .inputBox  textarea:valid~.line{
+	height:100%;}
+input[type="submit"]{
+	border:none;
+	padding:7px 35px;
+	cursor:pointer;
+	outline:none;
+	background:#45f3ff;
+	color:#000;
+	font-size:18px;
+	border-radius:2px;;}
+	
+	
+			
+
+	
